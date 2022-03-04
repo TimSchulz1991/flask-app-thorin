@@ -21,21 +21,22 @@
         <!-- This way to write an if clause will only show the uneven indexes* data from the json -->
         {% if loop.index % 2 != 0 %}
 
-        <div class="col-md-7">
-            <h3>{{loop.index}}. {{member.name}}</h3>
-            <p>{{member.description}}</p>
-        </div>
-        <div class="col-md-5">
-            <img src="{{member.image_source}}" alt="{{member.name}}" class="featurette-image image-responsive">
-        </div>
+            <div class="col-md-7">
+                <h3>{{loop.index}}. {{member.name}}</h3>
+                <p>{{member.description}}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{member.image_source}}" alt="{{member.name}}" class="featurette-image image-responsive">
+            </div>
+
         {% else %}
-        <div class="col-md-5">
-            <img src="{{member.image_source}}" alt="{{member.name}}" class="featurette-image image-responsive">
-        </div>
-        <div class="col-md-7">
-            <h3>{{loop.index}}. {{member.name}}</h3>
-            <p>{{member.description}}</p>
-        </div>
+            <div class="col-md-5">
+                <img src="{{member.image_source}}" alt="{{member.name}}" class="featurette-image image-responsive">
+            </div>
+            <div class="col-md-7">
+                <h3>{{loop.index}}. {{member.name}}</h3>
+                <p>{{member.description}}</p>
+            </div>
         {% endif %}
     </div>
 
